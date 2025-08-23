@@ -44,7 +44,7 @@
                 Ediora: <span th:text="${livro.editora}"></span>
                 Preço: <span th:text="${livro.preco}"></span>
                 ISBN: <span th:text="${livro.isbn}"></span>
-                Data Publicação: <span th:text="${livro.dataPublicacao}"></span>
+                Data Publicação: <span th:text="${#temporals.format(livro.dataPublicacao, 'dd-mm-yyyy)'}"></span>
                 Editar | Deletar
             </p>
             <button th:attr="onclick=|hide('infoModal' + ${livro.id})|">
