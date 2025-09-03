@@ -45,7 +45,7 @@
                 Preço: <span th:text="${livro.preco}"></span>
                 ISBN: <span th:text="${livro.isbn}"></span>
                 Data Publicação: <span th:text="${#temporals.format(livro.dataPublicacao, 'dd-mm-yyyy)'}"></span>
-                Editar | Deletar
+              <a th:href="@{/livros/cadastro/{id}(id = ${livro.id})}">Editar</a> | <a th:href="@{/livros/deletar/{id}(id = ${livro.id})}">Deletar</a>
             </p>
             <button th:attr="onclick=|hide('infoModal' + ${livro.id})|">
                 Fechar
